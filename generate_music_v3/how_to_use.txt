@@ -1,0 +1,15 @@
+* 실행 환경
+conda activate venv_lmm
+
+* 설치 라이브러리
+pip install requests beautifulsoup4 openai pytesseract pillow transformers torch scipy keybert nltk matplotlib konlpy pydub scikit-learn
+
+* window에 ffmpeg, tesseract-ocr 설치 되어있는지 확인(path 설정까지)
+* Java 17 이상 설치되어있는지 확인
+
+# 웹툰 URL에서 음악 생성
+// 피폐물을 힐링물로 만드는 방법 48화
+python main.py --type webtoon --input "https://comic.naver.com/webtoon/detail?titleId=826381&no=48&week=mon&listSortOrder=DESC&listPage=1" --output "webtoon_music_test.wav"
+
+# 웹소설 텍스트 파일에서 음악 생성
+python main.py --type novel --input "romance_test1.txt" --output "novel_music.wav"

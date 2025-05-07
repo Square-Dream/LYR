@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+  <meta content="네이버에 로그인 하고 다양한 서비스를 이용해 보세요" name="description"/>
+  <meta content="index, follow" name="robots"/>
+  <meta content="네이버 로그인" name="Keywords"/>
+  <title>
+   네이버 : 로그인
+  </title>
+  <link href="/login/image/favicon.ico" rel="shortcut icon"/>
+  <link href="https://s.pstatic.net/static/www/mobile/edit/20220408_0/upload_16493972759253VFbg.png" rel="apple-touch-icon-precomposed"/>
+  <link href="https://s.pstatic.net/static/www/mobile/edit/20220408_0/upload_1649397297725OckVW.png" rel="apple-touch-icon-precomposed" sizes="96x96"/>
+  <link href="https://s.pstatic.net/static/www/mobile/edit/20220408_0/upload_1649397312685xI8Rn.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
+  <link href="https://s.pstatic.net/static/www/mobile/edit/20220408_0/upload_1649397328060s5AJW.png" rel="apple-touch-icon-precomposed" sizes="192x192"/>
+  <link href="https://nid.naver.com/favicon_1024.png" rel="apple-touch-icon-precomposed" sizes="1024x1024">
+   <link href="/login/css/v2/mobile/mlogin.default.20250409.css?v=20250409" rel="stylesheet" type="text/css"/>
+   <script src="/login/js/srcOnError.js" type="text/javascript">
+   </script>
+  </link>
+ </head>
+ <body class="whole_white">
+  <div class="wrap" id="wrap">
+   <div class="u_skip">
+    <a href="#container">
+     본문 바로가기
+    </a>
+   </div>
+   <header class="header" id="header" role="banner">
+    <div class="header_inner">
+     <button class="btn_back" id="back" tyle="button">
+      <span class="icon_back">
+       <span class="blind">
+        뒤로가기
+       </span>
+      </span>
+     </button>
+     <div class="lang">
+      <a aria-expanded="false" aria-label="언어선택" class="lang_select" href="#" id="locale_switch" role="listbox">
+       <span class="lang_text" id="langCode">
+        한국어
+       </span>
+      </a>
+      <ul class="lang_list" id="lang_list" style="display: none;">
+       <li>
+        <a class="language" href="#" id="lang_ko">
+         <span class="text">
+          한국어
+         </span>
+        </a>
+       </li>
+       <li>
+        <a class="language" href="#" id="lang_en">
+         <span class="text">
+          English
+         </span>
+        </a>
+       </li>
+       <li>
+        <a class="language" href="#" id="lang_cn">
+         <span class="text">
+          中文(简体)
+         </span>
+        </a>
+       </li>
+       <li>
+        <a class="language" href="#" id="lang_tw">
+         <span class="text">
+          中文(台灣)
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </header>
+   <div class="container" id="container">
+    <!-- content -->
+    <div id="content">
+     <div class="login_logo_wrap">
+      <a href="https://m.naver.com">
+       <h1 class="logo">
+        <span class="blind">
+         네이버
+        </span>
+       </h1>
+      </a>
+     </div>
+     <div class="login_wrap">
+      <div class="login_inner">
+       <form action="https://nid.naver.com/nidlogin.login" autocomplete="off" id="frmNIDLogin" method="POST" name="frmNIDLogin" target="_top">
+        <input id="localechange" name="localechange" type="hidden" value=""/>
+        <input id="dynamicKey" name="dynamicKey" type="hidden" value="KVR-Y9Zfq63grVr9r-JcqrDioHKpy0UnD_0ujNxcD1tCxzJ0_QiHPOomyTjJ0rIJWvrScfm7tIQuzVvzQuG5NoI1CO-wRBs_aQk4zU8LA0o"/>
+        <input id="encpw" name="encpw" type="hidden" value=""/>
+        <input id="sessionKey" name="sessionKey" type="hidden" value=""/>
+        <input id="show_pk" name="show_pk" type="hidden" value="true"/>
+        <input id="wtoken" name="wtoken" type="hidden" value=""/>
+        <input id="a_version" name="a_version" type="hidden" value="2"/>
+        <input id="svctype" name="svctype" type="hidden" value="262272"/>
+        <input id="surl" name="surl" type="hidden" value="https://comic.naver.com/"/>
+        <input id="viewtype" name="viewtype" type="hidden" value="2"/>
+        <input id="bvsd" name="bvsd" type="hidden" value=""/>
+        <input id="locale" name="locale" type="hidden" value="ko_KR"/>
+        <input id="url" name="url" type="hidden" value="https://comic.naver.com/webtoon/detail?titleId=796867&amp;no=137"/>
+        <input id="enctp" name="enctp" type="hidden" value="1"/>
+        <input id="next_step" name="next_step" type="hidden" value="false"/>
+        <input id="fbOff" name="fbOff" type="hidden" value="true"/>
+        <input id="smart_LEVEL" name="smart_LEVEL" type="hidden" value="-1"/>
+        <input id="encnm" name="encnm" type="hidden" value=""/>
+        <div class="login_form_wrap">
+         <div class="login_title_wrap">
+          <p class="login_desc" id="adult_msg">
+           서비스 이용을 위해 연령 확인이 필요합니다.
+           <br/>
+           로그인 후 이용해주세요.
+          </p>
+         </div>
+         <div class="login_form">
+          <div class="login_box">
+           <div class="input_item id" id="input_item_id">
+            <input accesskey="L" aria-label="아이디 또는 전화번호" autocapitalize="none" class="input_id" id="id" maxlength="41" name="id" title="아이디" type="text" value=""/>
+            <label aria-hidden="true" class="text_label" for="id" id="id_label">
+            </label>
+            <button class="btn_delete" id="id_clear" style="display: none;" type="button">
+             <span class="icon_delete">
+              <span class="blind">
+               삭제
+              </span>
+             </span>
+            </button>
+           </div>
+           <div class="input_item pw" id="input_item_pw">
+            <input aria-label="비밀번호" class="input_pw" id="pw" maxlength="16" name="pw" title="비밀번호" type="password"/>
+            <label aria-hidden="true" class="text_label" for="pw" id="pw_label">
+            </label>
+            <button aria-pressed="false" class="btn_view hide" id="pw_hide" style="display: none;" type="button">
+             <span class="icon_view">
+              <span class="blind" id="icon_view">
+               선택 안 됨,비밀번호 표시
+              </span>
+             </span>
+            </button>
+            <button class="btn_delete" id="pw_clear" style="display: none;" type="button">
+             <span class="icon_delete">
+              <span class="blind">
+               삭제
+              </span>
+             </span>
+            </button>
+           </div>
+          </div>
+         </div>
+         <div class="login_error" id="login_error_msg" style="display:none;">
+          <div class="cell" style="width:100%">
+           <div class="error_message" id="error_message">
+           </div>
+          </div>
+          <div class="cell">
+           <a class="chatbot" href="https://nca.naver.com/chat/account/view" id="log.chatbot" style="display: none;" target="_blank">
+            <span class="blind">
+             챗봇상담
+            </span>
+           </a>
+          </div>
+         </div>
+         <!-- button -->
+         <button class="btn_check off next_step" id="submit_btn" type="button">
+          <!-- tg-text=btn-text -->
+          <span class="text" id="login_btn">
+           .
+          </span>
+         </button>
+         <div class="login_stay" id="login_stay">
+          <input id="nvlongoff" name="nvlongoff" type="hidden" value=""/>
+          <input checked="" id="login_chk" name="nvlong" type="checkbox" value="on"/>
+          <label class="check_row" for="login_chk">
+           <span class="check_text" id="staylogin">
+            로그인 상태 유지
+           </span>
+          </label>
+         </div>
+         <div class="dividing_safe" id="passkey.divider">
+          <span class="text" id="safer">
+           지문 · 얼굴 인증을 설정했다면
+          </span>
+         </div>
+         <button class="btn_check white nlog-click" id="log.passkeylogin" type="button">
+          <!-- tg-text=btn-text-passkey-login -->
+          <span class="text" id="passkeyText_btn">
+           패스키 로그인
+          </span>
+          <span class="blind" id="log.passkey.login.blind">
+           패스키로그인 버튼
+          </span>
+         </button>
+        </div>
+       </form>
+       <ul class="find_wrap" id="find_wrap_KR">
+        <li>
+         <a class="find_text" href="https://nid.naver.com/user2/api/route?m=routePwInquiry&amp;lang=ko_KR" id="pwinquiry" target="_blank">
+          비밀번호 찾기
+         </a>
+        </li>
+        <li>
+         <a class="find_text" href="https://nid.naver.com/user2/api/route?m=routeIdInquiry&amp;lang=ko_KR" id="idinquiry" target="_blank">
+          아이디 찾기
+         </a>
+        </li>
+        <li>
+         <a class="find_text" href="https://nid.naver.com/user2/V2Join?m=agree&amp;lang=ko_KR&amp;realname=N" id="join" target="_blank">
+          <span class="accent" id="joinspan">
+           회원가입
+          </span>
+         </a>
+        </li>
+       </ul>
+       <ul class="find_wrap" id="find_wrap">
+        <li>
+         <div class="find_text">
+          Forgot
+          <a class="find_link" href="https://nid.naver.com/user2/api/route?m=routePwInquiry&amp;lang=en_US" id="pwinquiry2" target="_blank">
+           Password
+          </a>
+          or
+          <a class="find_link" href="https://nid.naver.com/user2/api/route?m=routeIdInquiry&amp;lang=en_US" id="idinquiry2" target="_blank">
+           ID
+          </a>
+          ?
+         </div>
+        </li>
+        <li>
+         <a class="find_text" href="https://nid.naver.com/user2/V2Join?m=agree&amp;lang=en_US&amp;realname=N" id="join2" target="_blank">
+          <span class="accent" id="joinspan2">
+           Sign up
+          </span>
+         </a>
+        </li>
+       </ul>
+       <div class="sns_wrap" id="sns_wrap">
+        <p class="sns_title">
+         Sign in &amp; Join with
+        </p>
+        <ul class="sns_list">
+         <li>
+          <a href="/oauth/global/initSNS?idp_cd=line&amp;locale=ko_KR&amp;svctype=262272&amp;postDataKey=&amp;url=https%3A%2F%2Fcomic.naver.com%2Fwebtoon%2Fdetail%3FtitleId%3D796867%26no%3D137" id="sns_line">
+           <span class="icon_line">
+            <span class="blind">
+             LINE
+            </span>
+           </span>
+          </a>
+         </li>
+         <li>
+          <a id="facebookOff">
+           <span class="icon_face">
+            <span class="blind">
+             Facebook
+            </span>
+           </span>
+          </a>
+         </li>
+        </ul>
+       </div>
+       <div id="gladbanner" style="padding-top:40px">
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <footer class="footer" role="contentinfo">
+    <div class="footer_inner">
+     <ul class="footer_list">
+      <li>
+       <a class="footer_item" href="https://nca.naver.com/chat/account/view" id="fot.smartbot">
+        <span class="footer_text" id="footer_smartbot">
+         스마트봇 상담
+        </span>
+       </a>
+      </li>
+      <li>
+       <a class="footer_item" href="https://help.naver.com/service/5640/category/bookmark?lang=ko" id="fot.help">
+        <span class="footer_text" id="foooter_help">
+         고객센터
+        </span>
+       </a>
+      </li>
+     </ul>
+     <div class="footer_logo_area">
+      <a class="footer_item" href="https://www.navercorp.com/" id="fot.footlogo">
+       <span class="footer_logo">
+        <span class="blind">
+         네이버
+        </span>
+       </span>
+      </a>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <div class="popup" id="facebookOffDiv" style="display: none">
+   <div class="dimbg">
+   </div>
+   <div class="layer_wrap">
+    <div class="popup_center">
+     <div class="popup_content">
+      <strong class="title">
+       If you signed in with Facebook, switch to NAVER ID. Please contact customer service.
+      </strong>
+      <div class="button_area">
+       <button class="btn_popup cancel" id="facebookOffDivCancel" type="button">
+        Cancel
+       </button>
+       <button class="btn_popup confirm" id="facebookOffDivConfirm" type="button">
+        Contact us
+       </button>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+ <input id="nclicks_nsc" name="nclicks_nsc" type="hidden" value="Mnid.login_kr"/>
+ <input id="nid_buk" name="nid_buk" type="hidden" value="none"/>
+ <input id="session_keys" name="session_keys" type="hidden" value="CcbDfRTb19xSQco7ZDlXpG7XSj020YYG,100020825,8557d1aea45ffc04d57955a054a8bb612e62c0ebd7ff5eead9f50fa2f7f120ca55bd1289d230e2f1a64ea313d9907fca691ac02f534221a98d43d2362681eb8f20ef0a245f93ef0330c6d2ed90102e684a65cce528d982a2dc70773e81a7177978ddfde4100403ed843c7ab2628357296affa7deb30d59d0f36890534a9c8bf5,010001"/>
+ <input id="ncaptchaSplit" name="ncaptchaSplit" type="hidden" value="none"/>
+ <input id="onload_pk" name="onload_pk" type="hidden" value="false"/>
+ <input id="dispclientname" name="dispclientname" type="hidden" value=""/>
+ <input id="failUrl" name="failUrl" type="hidden" value=""/>
+ <script async="" src="https://ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js" type="text/javascript">
+ </script>
+ <script src="/passkey/js/passkeyApi.js?v=20250120" type="text/javascript">
+ </script>
+ <script src="/login/js/v3/mobile/default.js?v=20250428" type="text/javascript">
+ </script>
+ <script src="/login/js/imgOnError.js" type="text/javascript">
+ </script>
+ <script async="" defer="" ncaptcha-onload="initNcaptcha" src="https://ncpt.naver.com/static/ncaptcha-api.js?ncaptcha-sitekey=6e3d93f4f845d053db08d51e2eb36ca3efe03fea21f21ee8d02e60ef10f6b73a15e951eccc1ef4b866ab3ce4" type="text/javascript">
+ </script>
+ <div id="nv_stat" style="display:none;">
+  20
+ </div>
+</html>
