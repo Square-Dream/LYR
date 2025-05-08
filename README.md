@@ -5,9 +5,8 @@ This project extracts emotions from webtoon images and novel text, then generate
 
 ---
 
-## How To Use
 📺 [Toondy 시연 영상 보기](https://youtu.be/iDXE8Kmgd40)
----
+
 
 ## Project Structure
 
