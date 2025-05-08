@@ -3,11 +3,10 @@
 
 This project extracts emotions from webtoon images and novel text, then generates emotionally aligned music using AI models. It integrates OCR, keyword extraction, emotion classification, and music generation through MusicGen.
 
----
-
 📺 [Watching Toondy in YouTube](https://youtu.be/iDXE8Kmgd40)
 🚀 [Using Toondy Yourself (Hugging Face)](https://huggingface.co/spaces/Youngmaster0/Square_Dream_Webtoon_or_Image_or_Novel_to_Music_Generator/tree/main)
 
+---
 
 ## Project Structure
 
