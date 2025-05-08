@@ -234,13 +234,14 @@ def analyze_image_content(image_path, api_key):
         traceback.print_exc()
         return ["image", "visual", "scene", "character", "emotion"]
 
-def extract_keywords(content, content_type='webtoon', num_keywords=15):
+def extract_keywords(content, content_type='webtoon', api_key=None, num_keywords=15):
     """
     콘텐츠에서 키워드와 분위기를 추출합니다.
     
     Args:
         content (dict): 콘텐츠 정보
         content_type (str): 콘텐츠 타입 ('webtoon' 또는 'novel')
+        api_key (str): OpenAI API 키 (선택 사항)
         num_keywords (int): 추출할 키워드 수
         
     Returns:
@@ -251,6 +252,7 @@ def extract_keywords(content, content_type='webtoon', num_keywords=15):
     try:
         # KeyBERT 모델 초기화
         kw_model = KeyBERT()
+        client = get_openai_client(api_key) if api_key else None
         
         # 텍스트 추출
         if content_type == 'webtoon':
@@ -275,7 +277,7 @@ def extract_keywords(content, content_type='webtoon', num_keywords=15):
                     if os.path.exists(group_path):
                         try:
                             # 그룹 이미지 분석
-                            group_img_keywords = analyze_image_content(group_path)
+                            group_img_keywords = analyze_image_content(group_path, api_key)
                             group_keywords.extend(group_img_keywords)
                             print(f"Keywords from group image analysis: {group_img_keywords}")
                         except Exception as group_error:
@@ -287,7 +289,7 @@ def extract_keywords(content, content_type='webtoon', num_keywords=15):
             # 그룹 이미지가 없거나 분석 실패한 경우 전체 이미지 분석
             if not image_keywords and 'combined_image_path' in content and content['combined_image_path'] and os.path.exists(content['combined_image_path']):
                 try:
-                    image_keywords = analyze_image_content(content['combined_image_path'])
+                    image_keywords = analyze_image_content(content['combined_image_path'], api_key)
                     print(f"Keywords from combined image analysis: {image_keywords}")
                 except Exception as img_error:
                     print(f"Error in combined image analysis: {img_error}")

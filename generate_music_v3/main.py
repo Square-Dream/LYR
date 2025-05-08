@@ -16,7 +16,7 @@ def create_output_directory(content_type, input_source):
     Args:
         content_type (str): 콘텐츠 타입 ('webtoon' 또는 'novel')
         input_source (str): 입력 소스 (URL 또는 파일 경로)
-
+        api: 수동
     Returns:
         str: 생성된 출력 디렉토리 경로
     """
@@ -101,7 +101,7 @@ def main():
         visualize_keywords(keywords, output_path=visualization_path)
 
         # 음악 생성
-        music_path = generate_music(keywords, genre, mood, era, music_style, output_path, api_key=args.api_key)
+        music_path = generate_music(keywords, genre, mood, era, music_style, output_path)
 
         if music_path:
             print(f"Music generated successfully at {music_path}")
