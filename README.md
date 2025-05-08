@@ -5,6 +5,10 @@ This project extracts emotions from webtoon images and novel text, then generate
 
 ---
 
+## How To Use
+https://youtu.be/iDXE8Kmgd40
+---
+
 ## Project Structure
 
 ```
