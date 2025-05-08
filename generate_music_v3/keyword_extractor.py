@@ -43,7 +43,7 @@ def get_openai_client():
         # os.environ["OPENAI_API_KEY"] = "your-api-key-here"
         
         # API 키 설정 방법 2: 직접 전달
-        return OpenAI(api_key="여러분의_apikey_넣어주세요")  # 실제 API 키로 교체
+        return OpenAI(api_key="여러분의키를넣어주세요")  # 실제 API 키로 교체
     except Exception as e:
         print(f"Error initializing OpenAI client: {e}")
         return None

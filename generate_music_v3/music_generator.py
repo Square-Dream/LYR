@@ -139,7 +139,7 @@ def generate_music(keywords, genre, mood, era, music_style, output_path, use_cac
     music_style_desc = music_style_map.get(music_style, 'cinematic instrumental music')
     
     # 고정된 세그먼트 수 (3분 = 6개 세그먼트)
-    num_segments = 6
+    num_segments = 2
     
     # 각 세그먼트에 대한 최대 토큰 수 (약 30초)
     max_tokens = 1000
