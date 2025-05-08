@@ -75,8 +75,8 @@ def main():
             content = extract_webtoon_content(args.input, use_cache=args.use_cache, output_dir=output_dir)
             
             # 이미지 추출 성공 여부 확인
-            if content['images']:
-                print(f"Successfully extracted {len(content['images'])} images from webtoon")
+            if content['group_image_paths']:
+                print(f"Successfully extracted {len(content['group_image_paths'])} group images from webtoon")
             else:
                 print("Failed to extract images from webtoon")
         else:  # novel
