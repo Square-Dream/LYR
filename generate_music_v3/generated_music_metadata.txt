@@ -1,0 +1,9 @@
+Generated Music Metadata
+----------------------
+Keywords: 제29화., 그가, 건넨, 따뜻한, 손등
+Genre: cinematic
+Mood: dramatic
+Era: modern
+Music Style: epic
+Duration: 3 minutes (6 segments)
+Base Prompt: cinematic instrumental music that feels emotional and expressive, with elements of melodic instrumental music, inspired by 제29화., 그가, 건넨, 따뜻한, 손등, instrumental

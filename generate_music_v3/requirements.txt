@@ -1,0 +1,14 @@
+gradio
+Pillow
+pytesseract
+torch
+transformers
+pydub
+beautifulsoup4
+requests
+paddleocr
+keybert
+konlpy
+nltk
+matplotlib
+openai

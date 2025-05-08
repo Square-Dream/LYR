@@ -14,6 +14,114 @@ import numpy as np
 # Tesseract OCR 경로 설정 (Windows 기준)
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
+import os
+import hashlib
+import json
+from PIL import Image
+import pytesseract
+
+# def extract_webtoon_from_files(files, use_cache=True, output_dir="webtoon_images"):
+#     """
+#     여러 이미지 파일에서 텍스트를 추출하고, 이미지를 저장합니다.
+
+#     Args:
+#         files (list): Gradio에서 업로드된 파일 리스트
+#         use_cache (bool): 캐시 사용 여부
+#         output_dir (str): 출력 디렉토리 경로
+
+#     Returns:
+#         dict: 이미지 경로 및 추출된 텍스트
+#     """
+#     os.makedirs(output_dir, exist_ok=True)
+
+#     texts = []
+#     image_paths = []
+
+#     for file in files:
+#         try:
+#             # 파일명 해시 생성
+#             file_hash = hashlib.md5(file.read()).hexdigest()
+#             file.seek(0)
+#             cache_path = os.path.join("cache", f"{file_hash}.json")
+
+#             # 캐시 사용
+#             if use_cache and os.path.exists(cache_path):
+#                 with open(cache_path, "r", encoding="utf-8") as f:
+#                     cached_data = json.load(f)
+#                     texts.extend(cached_data["texts"])
+#                     image_paths.extend(cached_data["image_paths"])
+#                 continue
+
+#             # 이미지 저장
+#             img = Image.open(file)
+#             image_path = os.path.join(output_dir, f"webtoon_{file_hash}.jpg")
+#             img.save(image_path, "JPEG")
+#             image_paths.append(image_path)
+
+#             # OCR 텍스트 추출
+#             extracted_text = pytesseract.image_to_string(img, lang='kor+eng')
+#             texts.append(extracted_text)
+
+#             # 캐시 저장
+#             with open(cache_path, "w", encoding="utf-8") as f:
+#                 json.dump({"texts": texts, "image_paths": image_paths}, f, ensure_ascii=False, indent=2)
+
+#         except Exception as e:
+#             print(f"Error processing file {file.filename}: {e}")
+
+#     return {"images": image_paths, "texts": texts}
+
+def extract_webtoon_from_files(files, use_cache=True, output_dir="webtoon_images"):
+    """
+    여러 이미지 파일에서 텍스트를 추출하고, 이미지를 저장합니다.
+
+    Args:
+        files (list): Gradio에서 업로드된 파일 리스트
+        use_cache (bool): 캐시 사용 여부
+        output_dir (str): 출력 디렉토리 경로
+
+    Returns:
+        dict: 이미지 경로 및 추출된 텍스트
+    """
+    os.makedirs(output_dir, exist_ok=True)
+
+    texts = []
+    image_paths = []
+
+    for file in files:
+        try:
+            # Gradio의 NamedString 객체를 처리하기 위해 file.name으로 접근
+            if hasattr(file, 'name'):
+                file_path = file.name
+            else:
+                file_path = file
+
+            # 파일이 실제로 존재하는지 확인
+            if not os.path.exists(file_path):
+                print(f"File not found: {file_path}")
+                continue
+
+            # 파일 해시 생성
+            with open(file_path, 'rb') as f:
+                file_hash = hashlib.md5(f.read()).hexdigest()
+
+            # 이미지 저장 경로
+            image_path = os.path.join(output_dir, f"webtoon_{file_hash}.jpg")
+
+            # 이미지 파일 저장
+            img = Image.open(file_path)
+            img.save(image_path, "JPEG")
+            image_paths.append(image_path)
+
+            # OCR 텍스트 추출
+            extracted_text = pytesseract.image_to_string(img, lang='kor+eng')
+            texts.append(extracted_text)
+
+        except Exception as e:
+            print(f"Error processing file {file_path}: {e}")
+
+    return {"images": image_paths, "texts": texts}
+
 def extract_webtoon_content(url, use_cache=True, output_dir=None, group_size=5):
     """
     웹툰 URL에서 이미지와 텍스트를 추출합니다.

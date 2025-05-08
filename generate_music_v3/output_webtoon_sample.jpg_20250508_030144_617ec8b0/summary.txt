@@ -1,0 +1,9 @@
+Content Type: webtoon
+Input Source: ['D:/project/LYR/generate_music_v3/sample.jpg']
+Generated Music: output_webtoon_sample.jpg_20250508_030144_617ec8b0\generated_music.wav
+Genre: slice_of_life
+Mood: peaceful
+Era: modern
+Music Style: cinematic
+Keywords: unknown, powerful, urban, serene, calm, soothing, simple, today, contemporary, gentle, everyday, dramatic, current, emotional, thematic
+Processed on: 2025-05-08 03:18:08.819469
