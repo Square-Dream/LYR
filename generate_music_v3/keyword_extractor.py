@@ -34,21 +34,39 @@ except Exception as e:
     print(f"Warning: KoNLPy initialization failed: {e}")
     KONLPY_AVAILABLE = False
 
-def get_openai_client():
-    """OpenAI 클라이언트를 필요할 때만 초기화합니다."""
-    try:
-        from openai import OpenAI
-        # API 키 설정 방법 1: 환경 변수
-        # import os
-        # os.environ["OPENAI_API_KEY"] = "your-api-key-here"
+# def get_openai_client():
+#     """OpenAI 클라이언트를 필요할 때만 초기화합니다."""
+#     try:
+#         from openai import OpenAI
+#         # API 키 설정 방법 1: 환경 변수
+#         # import os
+#         # os.environ["OPENAI_API_KEY"] = "your-api-key-here"
         
-        # API 키 설정 방법 2: 직접 전달
-        return OpenAI(api_key="여러분의키를넣어주세요")  # 실제 API 키로 교체
+#         # API 키 설정 방법 2: 직접 전달
+#         return OpenAI(api_key="여러분의키를넣어주세요")  # 실제 API 키로 교체
+#     except Exception as e:
+#         print(f"Error initializing OpenAI client: {e}")
+#         return None
+
+def get_openai_client(api_key):
+    """
+    OpenAI 클라이언트를 초기화합니다.
+
+    Args:
+        api_key (str): OpenAI API 키
+
+    Returns:
+        openai.Client: OpenAI 클라이언트 인스턴스
+    """
+    try:
+        import openai
+        openai.api_key = api_key
+        return openai
     except Exception as e:
         print(f"Error initializing OpenAI client: {e}")
         return None
-
-def analyze_image_content(image_path):
+    
+def analyze_image_content(image_path, api_key):
     """
     이미지 내용을 분석하여 캐릭터의 표정, 행동, 감정 등을 추출합니다.
     OpenAI의 Vision API를 사용합니다.
@@ -93,7 +111,7 @@ def analyze_image_content(image_path):
             return ["image", "visual", "graphic"]
         
         # OpenAI 클라이언트 초기화 (필요할 때만)
-        client = get_openai_client()
+        client = get_openai_client(api_key)
         if not client:
             print("OpenAI client initialization failed, using basic keywords")
             return ["image", "visual", "graphic", "scene", "character"]
