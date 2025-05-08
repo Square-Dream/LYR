@@ -5,8 +5,8 @@ This project extracts emotions from webtoon images and novel text, then generate
 
 ---
 
-📺 [Toondy 시연 영상 보기](https://youtu.be/iDXE8Kmgd40)
-🚀 [Toondy 데모 바로가기 (Hugging Face)](https://huggingface.co/spaces/Youngmaster0/Square_Dream_Webtoon_or_Image_or_Novel_to_Music_Generator/tree/main)
+📺 [Watching Toondy in YouTube](https://youtu.be/iDXE8Kmgd40)
+🚀 [Using Toondy Yourself (Hugging Face)](https://huggingface.co/spaces/Youngmaster0/Square_Dream_Webtoon_or_Image_or_Novel_to_Music_Generator/tree/main)
 
 
 ## Project Structure
